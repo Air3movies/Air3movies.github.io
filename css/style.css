@@ -405,6 +405,12 @@ header{
     width: 100%;
     aspect-ratio: 16/9;
 }
+iframe {
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
 .close-video {
     position: absolute;
     top: -3rem;
@@ -500,7 +506,6 @@ header{
     }
     .copyright {
         margin-bottom: 4rem;
-
     }
 }
 @media (max-width:1060px) {
@@ -1026,6 +1031,8 @@ header{
       align-items: center;
       justify-content: space-between;
       padding: 35px;
+      border: dotted;
+      margin-top: 2rem !important;
   }
   .dropdown .dropdown-links {
       /* background: red; */
@@ -1065,7 +1072,7 @@ header{
       border-radius: 40px;
  }
   .dropdown .dropdown-links .links li ul {
-      /* border: red dotted; */
+      border: red dotted;
       display: grid;
       grid-template-columns: auto auto;
       width: 980px;
@@ -1129,31 +1136,3 @@ header{
 
 
 
-/* Iframe */
-#vidcon {
-    padding-bottom: 56.25%;
-    height: 0px;
-    background: rgb(0, 0, 0);
-}
-#vidcon, .im, .it {
-    overflow: hidden;
-}
-iframe[Attributes Style] {
-    border-top-width: 0px;
-    border-right-width: 0px;
-    border-bottom-width: 0px;
-    border-left-width: 0px;
-}
-iframe {
-    border-width: 2px;
-    border-style: inset;
-    border-color: initial;
-    border-image: initial;
-}
-#vidcon iframe {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-}
