@@ -1031,7 +1031,7 @@ iframe {
       align-items: center;
       justify-content: space-between;
       padding: 35px;
-      border: dotted;
+      /* border: dotted; */
       margin-top: 2rem !important;
   }
   .dropdown .dropdown-links {
@@ -1072,7 +1072,7 @@ iframe {
       border-radius: 40px;
  }
   .dropdown .dropdown-links .links li ul {
-      border: red dotted;
+      /* border: red dotted; */
       display: grid;
       grid-template-columns: auto auto;
       width: 980px;
@@ -1092,15 +1092,29 @@ iframe {
   #more {display: none;
 }
 #myBtn {
-    background: green;
+    background: transparent;
+    color: #00c2ba;
     padding: 10px;
     display: block;
-    border-radius: 20px;
-    font-size: 18px;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: 600;
     border-width: 8px;
+    border-color:#00c2ba ;
+    position: absolute;
+    top: auto;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    height: 70px;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: 2s;
 }
 #myBtn:hover {
-    background: var(--main-color);
+    /* background: var(--main-color); */
+    box-shadow: 0 2px 50px 0 #00c2ba,0 20px 100px 0 #00c2ba;
+    transition: 2s;
 }
 
 
