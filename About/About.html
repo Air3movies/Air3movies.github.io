@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content=IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Link Swiper CSS -->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon">
+    <!-- Box Icons-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://kit.fontawesome.com/a076d05399.js"></script>
+ </head>
+ <body>
+     <!-- Header -->
+     <header>
+         <!-- Nav -->
+         <div class="nav container">
+             <!-- Logo -->
+             <a href="Index.html" class="logo">
+                 AIR3<span>Movies</span>
+             </a>
+             <!-- Search Box -->
+             <div class="search-box">
+                 <input type="text" name="Search" id="search-input" placeholder="Search Movie" />
+                 <i class='bx bx-search-alt-2'></i>>
+                 <div class="search_bx2"></div>
+             </div>
+
+            <!-- NavBar -->
+            <div class="navbar">
+                <a href="#home" class="nav-link nav-active">
+                    <i class='bx bxs-home-smile' ></i>
+                    <span class="nav-link-title">Home</span>
+                </a>
+                <a href="#popular" class="nav-link">
+                    <i class='bx bxs-hot' ></i>
+                    <span class="nav-link-title">Trending</span>
+                </a>
+                <a href="#movies and shows" class="nav-link">
+                    <i class='bx bx-compass' ></i>
+                    <span class="nav-link-title">Explore</span>
+                </a>
+                <a href="Movies-list.html" class="nav-link">
+                    <i class='bx bx-tv' ></i>
+                    <span class="nav-link-title">Movies</span>
+                </a>
+                <a href="Series.html" class="nav-link">
+                    <i class='bx bx-heart' ></i>
+                    <span class="nav-link-title">Series</span>
+                </a>
+            </div>
+         </div>
+     </header>
+     <!-- Home -->
+
+     <Section class="about">
+        <div class="main">
+            <img src="/About/pexels-roberto-nickson-3131971.jpg">
+            <div class="about-text">
+                <h1>About Us</h1>
+                <p>This website is designed to entertain you with the lowest cost possible. 
+                    You may add in your suggestions, if you feel that the website could be improved in some way.
+                </p>
+                
+                <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Name" required>
+                <input type="email" name="Email" placeholder="Email Address" required>
+                <input class="textarea" name="Suggestions" placeholder="Suggestions">
+                <button type="submit">Subscribe</button>
+            </form>
+                <Span id="msg"></Span>
+                <div>
+                    <a href="https://www.paypal.com/donate/?hosted_button_id=EJX8427XS4PKL" class="Donation">Donate</a>
+                </div>
+            </div>
+        </div>
+
+            
+     </Section>
+     <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzNiwkOkj9jCiQ8Bi-M2PrOTgy1Yrk4UF-Aw70V0rzcMDSiQveI1aZyPuC_tryWQBQ_5A/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Thank you for Subscribing!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },3000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+      
+<!-- Footer Beginning -->
+<div class="footer-social-title">Follow us:</div>
+<div class="footer">
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-youtube"></a>
+    <a href="#" class="fa fa-instagram"></a>
+</div>
+     <!-- Copyright -->
+     <div class="copyright">
+        <p>&#169; AIR3 All Rights Reserved</p>
+    </div>
+
+
+
+     <!-- Link Swiper JS -->
+     <script src="/js/swiper-bundle.min.js"></script>
+     <!--Link To JS -->
+     <script src="js/main.js"></script>
+
+
+</body>
+</html>
